@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="./src/root.css" />
+    <link href="./src/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="root">
+        <div id="title-bar">
+            <div class="item">
+                <p class="title-bar-buttons" id="window-close"></p>
+                <!-- <p class="title-bar-buttons" id="window-minimize"></p> -->
+            </div>
+            <div class="item" style="-webkit-app-region: drag"></div>
+        </div>
+        <div id="content">
+            <div id="equlizer-container">
+                <canvas id="analyser-render"></canvas>
+                <video id="video-player"></video>
+            </div>
+            <div id="seek-container">
+                <div class="item">
+                    <span id="current-time">
+                        00:00
+                    </span>
+                </div>
+                <div class="item" id="media-name"></div>
+                <div class="item">
+                    <span id="total-duration">
+                        00:00
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="item">
+                <input type="file" id="media-chooser" style="display: none;" />
+                <button id="media-chooser-button">
+                    <i class="fa fa-music" aria-hidden="true"></i>
+                    Choose
+                </button>
+            </div>
+            <div class="item">
+                <div id="repeat-button" class="controls-icon">
+                    <i class="fa fa-repeat" aria-hidden="true"></i>
+                </div>
+                <div id="play-button" class="controls-icon">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i>
+                </div>
+                <div id="stop-button" class="controls-icon">
+                    <i class="fa fa-stop-circle" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="item" id="suffle-switch">
+                <input type="range" min="1" max="100" value="50" id="volume-range">
+            </div>
+        </div>
+    </div>
+
+    <script defer src="./src/build.js"></script>
+</body>
+
+</html>
